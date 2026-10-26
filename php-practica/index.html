@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario JH7 SRL</title>
+</head>
+<body>
+
+    <h1>JH7 SRL</h1>
+    <h2>Formulario de contacto</h2>
+
+    <form action="procesar.php" method="POST">
+
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" required>
+        <br><br>
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo" required>
+        <br><br>
+
+        <label>Servicio solicitado:</label>
+        <select name="servicio" required>
+            <option value="">Seleccione un servicio</option>
+            <option value="Fibra optica">Fibra óptica</option>
+            <option value="Radiobases">Radiobases</option>
+            <option value="Radioenlaces">Radioenlaces</option>
+            <option value="Mantenimiento FTTH">Mantenimiento FTTH</option>
+        </select>
+        <br><br>
+
+        <label>Mensaje:</label>
+        <textarea name="mensaje" required></textarea>
+        <br><br>
+
+        <button type="submit">Enviar solicitud</button>
+
+    </form>
+
+</body>
+</html>
