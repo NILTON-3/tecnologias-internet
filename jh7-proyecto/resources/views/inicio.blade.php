@@ -8,7 +8,7 @@
     <div class="contenedor">
         <span class="etiqueta">BIENVENIDOS</span>
 
-        <h1>JH7 SRL</h1>
+        <h1>JH7 S.R.L.</h1>
 
         <h2>Conectamos personas, acercamos soluciones</h2>
 

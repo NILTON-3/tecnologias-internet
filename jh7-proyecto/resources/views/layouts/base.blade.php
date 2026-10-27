@@ -15,16 +15,15 @@
     <header class="cabecera">
         <div class="contenedor barra">
 
-            <!-- NOMBRE DE LA EMPRESA -->
+            <!-- LOGOTIPO DE JH7 SRL -->
             <a href="/" class="identidad">
-                <span class="simbolo">
-                    JH<span>7</span>
-                </span>
-
-                <span>
-                    JH7 SRL
-                    <small>Telecomunicaciones</small>
-                </span>
+                <img
+                    src="{{ asset('img/logo-jh7.png') }}"
+                    alt="Logotipo de JH7 SRL"
+                    class="logo-empresa"
+                    width="150"
+                    style="width:150px; max-width:150px; height:auto; display:block;"
+                >
             </a>
 
             <!-- MENÚ DE NAVEGACIÓN -->
@@ -53,7 +52,7 @@
             </div>
 
             <span>
-                © {{ date('Y') }} JH7 SRL · Proyecto académico
+                © {{ date('Y') }} JH7 SRL ·
             </span>
 
         </div>
