@@ -40,13 +40,13 @@
         </div>
 
         <div class="servicio-tarjeta">
-            <h3>Radiobases</h3>
-            <p>Servicios relacionados con infraestructura de radiobases.</p>
+            <h3>Radio bases</h3>
+            <p>Servicios relacionados con infraestructura de radio bases.</p>
         </div>
 
         <div class="servicio-tarjeta">
             <h3>Radioenlaces</h3>
-            <p>Instalación y mantenimiento de radioenlaces.</p>
+            <p>Instalación y mantenimiento de radio enlaces.</p>
         </div>
 
         <div class="servicio-tarjeta">
