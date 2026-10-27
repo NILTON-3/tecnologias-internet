@@ -1,19 +1,150 @@
 @extends('layouts.base')
-@section('titulo','Contacto')
+
+@section('titulo', 'Contacto')
+
 @section('contenido')
-<section class="titulo-pagina"><div class="contenedor"><span class="etiqueta">ESCRÍBENOS</span><h1>Contacto</h1><p>Cuéntanos qué servicio necesitas.</p></div></section>
-<section class="contenedor seccion estrecho"><div class="formulario-tarjeta">
-<h2>Enviar una solicitud</h2>
-@if (session('exito')) <p class="aviso exito">{{ session('exito') }}</p> @endif
-@if ($errors->any()) <div class="aviso error"><strong>Revisa los datos:</strong><ul>@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul></div> @endif
-<form action="/contacto" method="POST">@csrf
-<label for="nombre">Nombre completo *</label><input id="nombre" name="nombre" value="{{ old('nombre') }}" required maxlength="100">
-<label for="correo">Correo electrónico *</label><input id="correo" name="correo" type="email" value="{{ old('correo') }}" required>
-<label for="telefono">Teléfono (opcional)</label><input id="telefono" name="telefono" type="tel" value="{{ old('telefono') }}">
-<label for="servicio">Servicio *</label><select id="servicio" name="servicio" required><option value="">Selecciona un servicio</option>
-@foreach (['Fibra óptica última milla','Radiobases','Radioenlaces','Mantenimiento y ampliaciones FTTH'] as $opcion)<option value="{{ $opcion }}" @selected(old('servicio')===$opcion)>{{ $opcion }}</option>@endforeach
-</select>
-<label for="mensaje">Mensaje *</label><textarea id="mensaje" name="mensaje" rows="5" required maxlength="2000">{{ old('mensaje') }}</textarea>
-<button class="boton" type="submit">Enviar solicitud</button>
-</form></div></section>
+
+    <!-- ENCABEZADO DE CONTACTO -->
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <h1>Contacto</h1>
+            <p>Solicita información sobre nuestros servicios.</p>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="seccion">
+        <div class="contenedor estrecho">
+
+            <div class="formulario-tarjeta">
+
+                <h2>Solicita un servicio</h2>
+
+                <p>
+                    Completa el formulario y nos pondremos
+                    en contacto contigo.
+                </p>
+
+                <!-- MENSAJE DE CONFIRMACIÓN -->
+                @if (session('exito'))
+                    <div class="aviso exito">
+                        {{ session('exito') }}
+                    </div>
+                @endif
+
+                <!-- ERRORES DE VALIDACIÓN -->
+                @if ($errors->any())
+                    <div class="aviso error">
+                        <p>Revisa los siguientes errores:</p>
+
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <!-- ENVÍO DE DATOS A LARAVEL -->
+                <form action="/contacto" method="POST">
+
+                    @csrf
+
+                    <!-- NOMBRE -->
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        value="{{ old('nombre') }}"
+                        required
+                    >
+
+                    <!-- CORREO -->
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        value="{{ old('correo') }}"
+                        required
+                    >
+
+                    <!-- TELÉFONO -->
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        value="{{ old('telefono') }}"
+                    >
+
+                    <!-- SERVICIO -->
+                    <label for="servicio">
+                        Servicio solicitado
+                    </label>
+
+                    <select
+                        id="servicio"
+                        name="servicio"
+                        required
+                    >
+                        <option value="">
+                            Selecciona un servicio
+                        </option>
+
+                        <option value="Fibra óptica última milla"
+                            @selected(old('servicio') == 'Fibra óptica última milla')>
+                            Fibra óptica última milla
+                        </option>
+
+                        <option value="Radiobases"
+                            @selected(old('servicio') == 'Radiobases')>
+                            Radio bases
+                        </option>
+
+                        <option value="Radioenlaces"
+                            @selected(old('servicio') == 'Radioenlaces')>
+                            Radio enlaces
+                        </option>
+
+                        <option value="Mantenimiento y ampliaciones FTTH"
+                            @selected(old('servicio') == 'Mantenimiento y ampliaciones FTTH')>
+                            Mantenimiento y ampliaciones FTTH
+                        </option>
+                    </select>
+
+                    <!-- MENSAJE -->
+                    <label for="mensaje">
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="5"
+                        required
+                    >{{ old('mensaje') }}</textarea>
+
+                    <!-- BOTÓN DE ENVÍO -->
+                    <button type="submit" class="boton">
+                        Enviar solicitud
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
 @endsection
