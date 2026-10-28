@@ -25,7 +25,7 @@
     <h2>Nuestros servicios</h2>
 
     <p>
-        Brindamos soluciones para la instalación,
+        Brindamos servicios en instalación,
         mantenimiento y ampliación de redes
         de telecomunicaciones.
     </p>
@@ -35,32 +35,28 @@
         <div class="servicio-tarjeta">
             <h3>Fibra óptica última milla</h3>
             <p>
-                Instalación de conexiones de fibra
-                óptica de última milla.
+            Despliegue e implementacion de redes de acceso ftth.
             </p>
         </div>
 
         <div class="servicio-tarjeta">
             <h3>Radio bases</h3>
             <p>
-                Servicios relacionados con
-                infraestructura de radio bases.
+            Implementación, montaje y mantenimiento preventivo y correctivo de estaciones radio base (BTS).
             </p>
         </div>
 
         <div class="servicio-tarjeta">
             <h3>Radio Enlaces</h3>
             <p>
-                Servicios de instalación y
-                mantenimiento de radio enlaces.
+            Implementación, configuración y mantenimiento preventivo y correctivo de enlaces inalámbricos de microondas.
             </p>
         </div>
 
         <div class="servicio-tarjeta">
-            <h3>Mantenimiento y ampliaciones FTTH</h3>
+            <h3>Soluciones de Planta Externa y Enlaces Ópticos</h3>
             <p>
-                Mantenimiento y ampliación
-                de redes de fibra óptica FTTH.
+            ​​Implementación y mantenimiento preventivo y correctivo de redes FTTH, infraestructura troncal y enlaces ópticos.
             </p>
         </div>
 
