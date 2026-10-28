@@ -36,22 +36,22 @@
 
         <div class="servicio-tarjeta">
             <h3>Fibra óptica última milla</h3>
-            <p>Instalación de conexiones de fibra óptica.</p>
+            <p>Despliegue e implementacion de redes de acceso ftth.</p>
         </div>
 
         <div class="servicio-tarjeta">
             <h3>Radio bases</h3>
-            <p>Servicios relacionados con infraestructura de radio bases.</p>
+            <p>Implementación, montaje y mantenimiento preventivo y correctivo de estaciones radio base (BTS).</p>
         </div>
 
         <div class="servicio-tarjeta">
-            <h3>Radioenlaces</h3>
-            <p>Instalación y mantenimiento de radio enlaces.</p>
+            <h3>Radio enlaces</h3>
+            <p>Implementación, configuración y mantenimiento preventivo y correctivo de enlaces inalámbricos de microondas.</p>
         </div>
 
         <div class="servicio-tarjeta">
-            <h3>Mantenimiento y ampliaciones FTTH</h3>
-            <p>Mantenimiento y ampliación de redes de fibra óptica.</p>
+            <h3>​Soluciones de Planta Externa y Enlaces Ópticos</h3>
+            <p>​​Implementación y mantenimiento preventivo y correctivo de redes FTTH, infraestructura troncal y enlaces ópticos.</p>
         </div>
 
     </div>
