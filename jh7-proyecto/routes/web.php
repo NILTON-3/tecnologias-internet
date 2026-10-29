@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Solicitud;
 
-// Página de inicio
+// Página principal 
 Route::get('/', function () {
     return view('inicio');
 });
@@ -20,7 +20,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-// Guardar solicitudes
+// Validar y guardar solicitudes de clientes
 Route::post('/contacto', function (Request $request) {
 
     $datos = $request->validate([
@@ -42,7 +42,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-// Verificar correo y contraseña
+// Verificar las credenciales del administrador
 Route::post('/login', function (Request $request) {
 
     $datos = $request->validate([
@@ -52,13 +52,14 @@ Route::post('/login', function (Request $request) {
 
     if (Auth::attempt($datos)) {
         $request->session()->regenerate();
+
         return redirect('/panel');
     }
 
     return back()->with('error', 'Correo o contraseña incorrectos.');
 });
 
-// Panel protegido
+// Panel administrativo protegido
 Route::get('/panel', function () {
 
     $solicitudes = Solicitud::latest()->get();
@@ -67,7 +68,7 @@ Route::get('/panel', function () {
 
 })->middleware('auth');
 
-// Cerrar sesión
+// Cerrar sesión del administrador
 Route::post('/logout', function (Request $request) {
 
     Auth::logout();
